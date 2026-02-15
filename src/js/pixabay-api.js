@@ -1,0 +1,22 @@
+import axios from "axios";
+
+export const featchImg = api =>{
+    const KEY = "54665781-1b012506ba8c9acb61074d03f";
+    const BASE_URL = `https://pixabay.com/api/`;
+
+return axios
+.get(BASE_URL, {
+params: {
+    key: KEY,
+    q: "yellow+flowers",
+    image_type: "photo",
+    orientation: "horizontal",
+    safesearch: true,
+},
+})
+.then(response => response.data.hits)
+
+};
+console.log(featchImg());
+
+    
