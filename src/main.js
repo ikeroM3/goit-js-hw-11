@@ -11,7 +11,7 @@ form.addEventListener('submit', event => {
 
   clearGallery();
   showLoader();
-
+setTimeout(() => {
   getImagesByQuery(query)
     .then(data => {
       if (data.hits.length === 0) {
@@ -32,4 +32,4 @@ form.addEventListener('submit', event => {
        event.target.reset();
     });
 
-});
+},2000)});
