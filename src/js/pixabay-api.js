@@ -8,7 +8,7 @@ return axios
 .get(BASE_URL, {
 params: {
     key: KEY,
-    q: "yellow+flowers",
+    q: api,
     image_type: "photo",
     orientation: "horizontal",
     safesearch: true,
@@ -17,6 +17,6 @@ params: {
 .then(response => response.data.hits)
 
 };
-console.log(featchImg());
+
 
     
