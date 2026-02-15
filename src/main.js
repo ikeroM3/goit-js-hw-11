@@ -29,5 +29,7 @@ form.addEventListener('submit', event => {
     })
     .finally(() => {
       hideLoader();
+       event.target.reset();
     });
+
 });
