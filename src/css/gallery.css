@@ -25,14 +25,7 @@ width: calc((100% - 20px) / 6);
 display: flex;
 }
 .info-item-label{
-    
     font-size: 14px;
     text-align: center;
     display: flex;
-}
-.info-item-value{
-    font-size: 14px;
-    text-align: center;
-    display: flex;
-    margin-left: 5px;
 }
