@@ -22,6 +22,8 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   margin: 0;
+  
+
 }
 
 main {
@@ -32,4 +34,13 @@ main:has(.back-link) {
 }
 img{
  list-style-type: none;
+
+}
+li{
+  list-style-type: none;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
 }

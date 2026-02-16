@@ -10,15 +10,34 @@ const gallery = document.querySelector('ul.gallery');
     const markup = images.map(img =>
       `<li class="gallery-item">
         <a class="gallery-link" href="${img.largeImageURL}">
-          <img class="gallery-image" src="${img.webformatURL}" alt="${img.tags}" loading="lazy" />
-        </a>
+          <img class="gallery-image" src="${img.webformatURL}" alt="${img.tags}"/>
+          </a>
+        
+            <ul class="info-list">
+              <li class="info-item">
+                <span class="info-item-label">Likes ${img.likes}</span>
+              </li>
+              <li class="info-item">
+                <span class="info-item-label">Views ${img.views}</span>
+              </li>
+              <li class="info-item">
+                <span class="info-item-label">Comments  ${img.comments}</span>
+              </li>
+              <li class="info-item">
+                <span class="info-item-label">Downloads ${img.downloads}</span>
+              </li>
+                
+     
+        </ul>
       </li>`
     ).join('');
+    
     
    
     gallery.innerHTML = markup;
     if (!lightbox) {
     lightbox = new SimpleLightbox('.gallery a');
+    
   }
 lightbox.refresh();
 
